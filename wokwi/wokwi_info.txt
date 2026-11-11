@@ -1,3 +1,0 @@
-WOKWI SIMULATION TH3:
-- Bài 1 (Wi-Fi AP/STA): Wokwi hỗ trợ mô phỏng kết nối Wi-Fi qua mạng ảo Wokwi-GUEST.
-- Bài 4 (HTTP): Web server trên Wokwi có thể mở qua tính năng Wokwi Forwarding.

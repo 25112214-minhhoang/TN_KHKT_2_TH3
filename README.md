@@ -16,7 +16,7 @@
 
 ### **Bài 2: BLE Server (Bluetooth Low Energy)**
 - **Nội dung:** Khởi tạo BLE Server tạo Service và Characteristic chứa chuỗi thông tin sinh viên (`MSV: 25112214 - Pham Minh Hoang`).
-- **Kết quả quan sát:** Sử dụng ứng dụng **nRF Connect** quét thấy thiết bị `ESP32_BLE_PhamMinhHoang_25112214`, kết nối thành công và đọc/ghi được đặc tính thông qua UUID.
+- **Kết quả quan sát:** Sử dụng ứng dụng **nRF Connect** quét thấy thiết bị BLE, kết nối thành công và đọc/ghi được đặc tính thông qua UUID.
 
 ### **Bài 3: Giao thức ESP-NOW (Truyền nhận trực tiếp giữa 2 Kit)**
 - **Nội dung:** 
@@ -27,6 +27,8 @@
 ### **Bài 4: HTTP Web Server Điều khiển LED**
 - **Nội dung:** Dựng WebServer cổng 80 với các route `/`, `/toggle`, `/on`, `/off` điều khiển LED chân GPIO2.
 - **Sơ đồ:** Sử dụng lại sơ đồ phần cứng TH1 (LED - GPIO2).
+![Sơ đồ mạch Bài 4](fritzing/bai1_heltec_wifi32_kit_v3.png)
+*(Ghi chú: Mã nguồn thiết kế Fritzing gốc `ffritzingb1.fzz` và `bai_2.fzz` đã được đính kèm trong thư mục `fritzing/` của repo này).*
 - **Kết quả quan sát:** Mở IP của ESP32 từ trình duyệt di động/PC cùng mạng, bấm các nút trên giao diện web để bật/tắt LED ngay tức thì.
 
 ### **Bài 5: MQTT Publish/Subscribe**
@@ -39,20 +41,8 @@
 
 ## 2. HÌNH ẢNH / VIDEO MINH CHỨNG THỰC TẾ
 
-![Bài 1 - Serial AP & STA](media/bai1_wifi_ap_sta.png)
-*Hình 1: Địa chỉ IP phát AP và IP nhận được ở chế độ Station.*
-
-![Bài 2 - nRF Connect BLE](media/bai2_ble_nrf.png)
-*Hình 2: Ứng dụng nRF Connect đọc đặc tính BLE từ ESP32.*
-
-![Bài 3 - ESP-NOW Serial](media/bai3_espnow_recv.png)
-*Hình 3: Serial Monitor của Receiver nhận gói tin ESP-NOW.*
-
-![Bài 4 - WebServer Browser](media/bai4_http_webserver.png)
-*Hình 4: Giao diện điều khiển WebServer trên trình duyệt.*
-
-![Bài 5 - MQTT App](media/bai5_mqtt_app.png)
-*Hình 5: Nhận dữ liệu Publish và gửi lệnh Subscribe trên ứng dụng MQTT.*
+![Bài 2 - nRF Connect BLE](media/bai2_ble_nrf.jpg)
+*Hình minh chứng: Ứng dụng nRF Connect quét và đọc đặc tính BLE từ ESP32.*
 
 ---
 
@@ -77,7 +67,7 @@
 
 5. **MQTT dùng mô hình publish/subscribe - broker và topic đóng vai trò gì?**
    - **Broker:** Là máy chủ trung gian tiếp nhận tất cả tin nhắn, quản lý kết nối và phân phối tin nhắn đến đúng các thiết bị đăng ký.
-   - **Topic:** Là đường dẫn chuỗi (ví dụ: `home/livingroom/temp`) đóng vai trò làm địa chỉ/chủ đề để phân loại dữ liệu. Publisher gửi tin vào Topic, Subscriber đăng ký Topic đó để nhận tin.
+   - **Topic:** Là đường dẫn chuỗi đóng vai trò làm địa chỉ/chủ đề để phân loại dữ liệu. Publisher gửi tin vào Topic, Subscriber đăng ký Topic đó để nhận tin.
 
 6. **Lựa chọn giao thức phù hợp cho 3 trường hợp:**
    - *(a) Điều khiển từ điện thoại ở gần:* **BLE** (tiết kiệm pin, kết nối thẳng không cần mạng).

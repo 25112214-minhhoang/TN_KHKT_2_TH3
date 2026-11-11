@@ -1,4 +1,0 @@
-SƠ ĐỒ ĐẤU NỐI BÀI THỰC HÀNH 3 (TH3):
-- Bài 1, Bài 2, Bài 3, Bài 5: Không bắt buộc đấu nối phần cứng phức tạp (chỉ dùng ESP32 và LED tích hợp GPIO2).
-- Bài 4 (HTTP Web Server): Sử dụng sơ đồ mạch TH1 (LED nối GPIO 2 qua điện trở 220 Ohm xuống GND, Nút bấm GPIO 4).
-- Chi tiết sơ đồ Fritzing gốc bài 4 được giữ đồng nhất với sơ đồ TH1.
